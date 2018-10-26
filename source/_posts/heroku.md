@@ -10,6 +10,8 @@ This installation method is required for users on ARM and BSD. You must have `no
 $ npm install -g heroku
 ```
 
+<!--more-->  <!--more-->
+
 ## [Verifying your installation](https://devcenter.heroku.com/articles/heroku-cli#verifying-your-installation)
 
 To verify your CLI installation, use the `heroku --version` command:

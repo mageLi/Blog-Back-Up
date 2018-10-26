@@ -18,7 +18,7 @@ const person = {
 };
 
 person.name = 'Jack';
-
+<!--more-->  <!--more-->
 const nums = [1, 2, 3, 4];
 nums.push(5);
 
@@ -123,4 +123,3 @@ export default Person;
 import { name, nums } from './file1';
 import Person from './file1';
 ```
-
