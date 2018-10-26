@@ -3,17 +3,19 @@
   // webpackBootstrap
   /******/ // The module cache
   /******/
-  var installedModules = {}; /******/ // The require function
+  var installedModules = {}; // The require function
   /******/
-  /******/ function __webpack_require__(moduleId) {
+  /******/ /******/
+  function __webpack_require__(moduleId) {
     /******/
     /******/ // Check if module is in cache
     /******/
     if (installedModules[moduleId])
       /******/
-      return installedModules[moduleId].exports; /******/ // Create a new module (and put it into the cache)
+      return installedModules[moduleId].exports; // Create a new module (and put it into the cache)
     /******/
-    /******/ var module = (installedModules[moduleId] = {
+    /******/ /******/
+    var module = (installedModules[moduleId] = {
       /******/
       exports: {},
       /******/
@@ -21,29 +23,36 @@
       /******/
       loaded: false
       /******/
-    }); /******/ // Execute the module function
+    }); // Execute the module function
     /******/
-    /******/ modules[moduleId].call(
+    /******/ /******/
+    modules[moduleId].call(
       module.exports,
       module,
       module.exports,
       __webpack_require__
-    ); /******/ // Flag the module as loaded
+    ); // Flag the module as loaded
     /******/
-    /******/ module.loaded = true; /******/ // Return the exports of the module
+    /******/ /******/
+    module.loaded = true; // Return the exports of the module
     /******/
-    /******/ return module.exports;
+    /******/ /******/
+    return module.exports;
     /******/
-  } /******/ // expose the modules object (__webpack_modules__)
+  } // expose the modules object (__webpack_modules__)
   /******/
   /******/
-  /******/ __webpack_require__.m = modules; /******/ // expose the module cache
+  /******/ /******/
+  __webpack_require__.m = modules; // expose the module cache
   /******/
-  /******/ __webpack_require__.c = installedModules; /******/ // __webpack_public_path__
+  /******/ /******/
+  __webpack_require__.c = installedModules; // __webpack_public_path__
   /******/
-  /******/ __webpack_require__.p = "/dist/"; /******/ // Load entry module and return exports
+  /******/ /******/
+  __webpack_require__.p = "/dist/"; // Load entry module and return exports
   /******/
-  /******/ return __webpack_require__(0);
+  /******/ /******/
+  return __webpack_require__(0);
   /******/
 })(
   /************************************************************************/
@@ -119,23 +128,23 @@
 
             liTmpl +=
               '<figure class="thumb" itemprop="associatedMedia" itemscope="" itemtype="http://schema.org/ImageObject">\
-                  <a href="' +
+                <a href="' +
               src +
               '" itemprop="contentUrl" data-size="1080x1080" data-type="' +
               type +
               '" data-target="' +
               src +
               '">\
-                    <img class="reward-img" data-type="' +
+                  <img class="reward-img" data-type="' +
               type +
               '" data-src="' +
               minSrc +
               '" src="/assets/img/empty.png" itemprop="thumbnail" onload="lzld(this)">\
-                  </a>\
-                  <figcaption style="display:none" itemprop="caption description">' +
+                </a>\
+                <figcaption style="display:none" itemprop="caption description">' +
               data.text[i] +
               "</figcaption>\
-              </figure>";
+            </figure>";
           }
           ulTmpl =
             ulTmpl +
@@ -144,10 +153,10 @@
             "年<em>" +
             data.month +
             '月</em></h1>\
-          <ul class="img-box-ul">' +
+        <ul class="img-box-ul">' +
             liTmpl +
             "</ul>\
-          </section>";
+        </section>";
         }
         document.querySelector(".instagram").innerHTML =
           '<div class="photos" itemscope="" itemtype="http://schema.org/ImageGallery">' +

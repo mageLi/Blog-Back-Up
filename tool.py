@@ -34,8 +34,6 @@ def list_img_file(directory):
         if fileformat.lower() == "jpg" or fileformat.lower() == "png" or fileformat.lower() == "gif":
             new_list.append(filename)
     # print new_list
-    new_list.sort()
-    
     return new_list
 
 
@@ -89,6 +87,8 @@ def compress_photo():
     for i in range(len(file_list_des)):
         if file_list_des[i] in file_list_src:
             file_list_src.remove(file_list_des[i])
+    if len(file_list_src) == 0:
+        print("=====没有新文件需要压缩=======")
     compress('4', des_dir, src_dir, file_list_src)
 
 def handle_photo():
@@ -100,6 +100,7 @@ def handle_photo():
     src_dir, des_dir = "photos/", "min_photos/"
     file_list = list_img_file(src_dir)
     list_info = []
+    file_list.sort(key=lambda x: x.split('_')[0])   # 按照日期排序
     for i in range(len(file_list)):
         filename = file_list[i]
         date_str, info = filename.split("_")
@@ -130,7 +131,7 @@ def handle_photo():
             list_info[-1]['arr']['type'].append('image')
     list_info.reverse()  # 翻转
     final_dict = {"list": list_info}
-    with open("./source/photos/data.json","w") as fp:
+    with open("../mageli.github.io/source/photos/data.json","w") as fp:
         json.dump(final_dict, fp)
 
 def cut_photo():
