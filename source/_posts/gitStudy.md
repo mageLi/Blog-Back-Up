@@ -78,3 +78,4 @@ Typora 使用手册： https://blog.csdn.net/sun13921881708/article/details/7115
 - git remote add origin <% url %> //Adding a remote
 - git push -u origin master //Pushing to github
 - login in to GitHub
+- git remote rm origin // disconnect to remote branch
