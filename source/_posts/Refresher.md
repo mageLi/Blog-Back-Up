@@ -5,32 +5,34 @@ date: 2018-10-13 00:49:54
 tags:
 ---
 
+ES6 refresher
+
+<!--more-->  <!--more-->
+
 ```javascript
 // CONST & LET
-let name = 'John';
+let name = "John";
 let test;
 
-name = 'Jack';
-
+name = "Jack";
 const person = {
-  name: 'John',
+  name: "John",
   age: 33
 };
 
-person.name = 'Jack';
-<!--more-->  <!--more-->
+person.name = "Jack";
 const nums = [1, 2, 3, 4];
 nums.push(5);
 
 // ARROW FUNCTIONS
 
 function sayHello() {
-  console.log('Hello');
+  console.log("Hello");
 }
 
 const sayHello = name => console.log(`Hello ${name}`);
 
-const fruits = ['Apples', 'Oranges', 'Grapes'];
+const fruits = ["Apples", "Oranges", "Grapes"];
 
 // FOREACH
 fruits.forEach((fruit, index) => console.log(fruit));
@@ -39,13 +41,13 @@ fruits.forEach((fruit, index) => console.log(fruit));
 
 const singleFruit = fruits.map(fruit => fruit.slice(0, -1).toUpperCase());
 console.log(singleFruit);
-["APPLE", "ORANGE", "GRAPE"]
+["APPLE", "ORANGE", "GRAPE"];
 
 // FILTER
 const people = [
-  { id: 1, name: 'Karen' },
-  { id: 2, name: 'Bob' },
-  { id: 3, name: 'Sharon' }
+  { id: 1, name: "Karen" },
+  { id: 2, name: "Bob" },
+  { id: 3, name: "Sharon" }
 ];
 
 const people2 = people.filter(person => person.id !== 2);
@@ -57,31 +59,30 @@ const arr2 = [...arr, 4];
 const arr3 = [...arr.filter(num => num !== 2)];
 
 const person1 = {
-  name: 'Brad',
+  name: "Brad",
   age: 36
 };
 
 const person2 = {
   ...person1,
-  email: 'brad@gmail.com'
+  email: "brad@gmail.com"
 };
 
 // DESTRUCTURING
 
 const profile = {
-  name: 'John Doe',
+  name: "John Doe",
   address: {
-    street: '40 Main st',
-    city: 'Boston'
+    street: "40 Main st",
+    city: "Boston"
   },
-  hobbies: ['movies', 'music']
+  hobbies: ["movies", "music"]
 };
 
 const { name, address, hobbies } = profile;
 const { street, city } = profile.address;
 console.log(hobbies);
-["movies", "music"]
-
+["movies", "music"];
 
 // CLASSES
 class Person {
@@ -95,8 +96,8 @@ class Person {
   }
 }
 
-const person1 = new Person('John', 33);
-const person2 = new Person('Sara', 28);
+const person1 = new Person("John", 33);
+const person2 = new Person("Sara", 28);
 
 // SUBCLASSES;
 class Customer extends Person {
@@ -110,16 +111,16 @@ class Customer extends Person {
   }
 }
 
-const customer1 = new Customer('Kevin', 32, 300);
+const customer1 = new Customer("Kevin", 32, 300);
 
 // MODULES
 
 // file 1 (file1.js)
-export const name = 'Jeff';
+export const name = "Jeff";
 export const nums = [1, 2, 3];
 export default Person;
 
 // // file 2 (file2.js)
-import { name, nums } from './file1';
-import Person from './file1';
+import { name, nums } from "./file1";
+import Person from "./file1";
 ```

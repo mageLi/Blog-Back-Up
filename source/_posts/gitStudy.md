@@ -1,5 +1,5 @@
 ---
-title: gitStudy
+title: GitStudy
 date: 2018-10-11 22:25:55
 tags:
 ---
