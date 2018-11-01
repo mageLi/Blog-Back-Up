@@ -50,6 +50,12 @@ Typora 使用手册： https://blog.csdn.net/sun13921881708/article/details/7115
 
 - Git Checkout
 
+- git branch -a
+
+- 删除远程分支
+  git branch -r -d origin/branch-name
+  git push origin :branch-name
+
 - git checkout -b feature1 //create a new branch
 
 - git checkout master //Switched to branch 'master'
@@ -60,11 +66,22 @@ Typora 使用手册： https://blog.csdn.net/sun13921881708/article/details/7115
 
 - git branch -d feature //Deleted branch feature1 (was 80f743f).
 
+- git pull --rebase origin master //出现failed to push some refs to git
+
 - git revert --no-commit 0766c053..HEAD
 
   HEAD
   O -> O -> O -> O
   Master
+
+  如果你遇到这样的错误： 
+  Please commit your changes or stash them before you merge.就证明你有文件冲突了 
+  有两种解决方法: 
+
+  1. git stash ，注意！这个方法会将你的所有操作全部删除，回滚到没冲突的状态。然后使用git pull就可以解决冲突了。 
+  2. git mergetool 
+    这个命令，你要做的就是编辑主窗口的那个文件，解决掉冲突，最后用git commit -m “merge”来提交你的操作，就可以恢复正常，推荐使用这个方法。
+  
 
 # Cloning and Github Intro
 
